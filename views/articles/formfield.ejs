@@ -1,0 +1,24 @@
+<div class="from-group">
+    <h3 for="title">Title</h3>
+    <input class="form-control form-control-lg" value="<%= article.title %>"type="text" name="title" id="title" required>
+</div>
+<div class = "mb-2"></div>
+<div class="from-group">
+    <h5 for="name">Author</h5>
+    <input class="form-control" value="<%= article.name %>"type="text" name="name" id="name" required>
+</div>
+<div class = "mb-2"></div>
+<div class="from-group">
+    <h5 for="description">Description</h5>
+    <textarea class="form-control"name="description" id="description"><%= article.description %></textarea>
+</div>
+<div class = "mb-2"></div>
+<div class="from-group">
+    <h5 for="markdown">Text</h5>
+    <textarea required class="form-control"name="markdown" id="markdown" rows="12"><%= article.markdown %></textarea>
+</div>
+<div class = "mb-3"></div>
+
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button class="btn btn-primary" type="submit">Save</button>
+
