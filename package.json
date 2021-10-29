@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devServer": "nodemon server.js"
+    "project": "nodemon server.js",
+    "devServer": "node server.js"
   },
   "author": "Emilio Manuel Miguel",
   "license": "ISC",

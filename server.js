@@ -8,7 +8,7 @@ const methodOverride = require('method-override')
 
 require('dotenv').config({ path: 'variables.env' })
 
-mongoose.connect('',
+mongoose.connect(process.env.dbURL,
 {useNewUrlParser: true, useUnifiedTopology: true})
 
 
@@ -23,7 +23,11 @@ page.get('/',async (req,res)=>{
     res.render('articles/index', { blogs: blogs})
 })
 
-
-
 page.use('/blogs', blogRouter)
-page.listen(3000)
+
+const host = process.env.HOST || '0.0.0.0'
+const port = process.env.PORT || 3000
+
+page.listen(port, host, () => {
+    console.log('SIUUUUU')
+})
