@@ -25,9 +25,11 @@ page.get('/',async (req,res)=>{
 
 page.use('/blogs', blogRouter)
 
-const host = process.env.HOST || '0.0.0.0'
-const port = process.env.PORT || 3000
+const HOST = process.env.HOST || '0.0.0.0'
+const PORT = process.env.PORT || 3000
 
-page.listen(port, host, () => {
+page.set("port", PORT)
+
+page.listen(PORT, HOST, () => {
     console.log('SIUUUUU')
 })
