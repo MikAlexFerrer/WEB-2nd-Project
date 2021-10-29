@@ -6,7 +6,9 @@ const mongoose = require('mongoose')
 const Article = require('./models/article')
 const methodOverride = require('method-override')
 
-mongoose.connect('mongodb://localhost/blog',
+require('dotenv').config({ path: 'variables.env' })
+
+mongoose.connect('',
 {useNewUrlParser: true, useUnifiedTopology: true})
 
 
